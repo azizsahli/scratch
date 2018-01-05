@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html>
 <head>
   <title>Upload your files</title>
@@ -12,9 +12,9 @@
 </body>
 </html>
 <?PHP
+  echo $_FILES ['uploaded_file'] ['tmp_location'];
   if(!empty($_FILES['uploaded_file']))
-  {
-    
+  { 
     $path = "uploads/";
     $path = $path . basename( $_FILES['uploaded_file']['name']);
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
